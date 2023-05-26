@@ -1,0 +1,32 @@
+.oneline{
+    display: flex;
+    align-items: center;
+}
+.custom-bg {
+    background-color: #171719;
+}
+body {
+    font-weight: bold;
+    overscroll-behavior: contain;
+}
+.custom-text-area{
+    background-color: #2d2d2d !important;
+}
+.custom-nav {
+    background-color: #27272a;
+}
+.normal-text {
+  font-weight: normal;
+}
+.rounded-vertical {
+    border-radius: 9999px;
+}
+.custom-paragraph {
+  color:  #b2b2b2;
+}
+a {
+    text-decoration: none;
+}
+.custom-warning {
+    color: red;
+}

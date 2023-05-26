@@ -1,0 +1,130 @@
+<html>
+<%- include('./partials/head.ejs'); %>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/bootstrap-icons.min.css" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+<style>
+    .oneline{
+        display: flex;
+        align-items: center;
+    }
+    .custom-bg {
+        background-color: #171719;
+    }
+    body {
+        font-weight: bold;
+        overscroll-behavior: contain;
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+    }
+    footer {
+        margin-top: auto;
+    }
+    .custom-text-area{
+        background-color: #2d2d2d !important;
+    }
+    .custom-nav {
+        background-color: #27272a;
+    }
+    .normal-text {
+      font-weight: normal;
+    }
+    .rounded-vertical {
+        border-radius: 9999px;
+    }
+    .custom-paragraph {
+      color:  #b2b2b2;
+    }
+    a {
+        text-decoration: none;
+    }
+    .custom-warning {
+        color: red;
+    }
+    .footer {
+      background-color: #27272a;
+      color: #fff;
+      padding: 20px;
+    }
+    .full-line {
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+    }
+    .red-heart {
+        color: red;
+    }
+</style>
+<body class="p-4 mb-2 custom-bg text-light">
+    <% if(_loggedIn == true){ %>
+        <nav class="pb-2 navbar navbar-expand-lg navbar-dark custom-nav rounded">
+            <a class="navbar-brand px-4 pt-2" href="/"><img src="https://cdn.discordapp.com/attachments/340044077649100800/1109773467974377482/Screenshot_2023-05-21_at_12.22.55-removebg-preview.png" width="170" height="60" salt="Logo"></a>
+            <div class="collapse navbar-collapse justify-content-end px-4">
+                <ul class="navbar-nav">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="/profile">Profile</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/logout">Log out</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/about">About Us</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    <% }else{ %>
+        <nav class="navbar navbar-expand-lg navbar-dark custom-nav rounded">
+            <a class="navbar-brand px-4 pt-2" href="/"><img src="https://cdn.discordapp.com/attachments/340044077649100800/1109773467974377482/Screenshot_2023-05-21_at_12.22.55-removebg-preview.png" width="170" height="60" salt="Logo"></a>
+            <div class="collapse navbar-collapse justify-content-end px-4">
+                <ul class="navbar-nav">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="/login">Log in</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/signup">Sign up</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/about">About Us</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    <% } %>
+
+    <h2 class="pt-3">About Us</h2>
+    <hr>
+    <p>
+        Vision Lab is the perfect solution for small teams which aim to make the best of their dataset. Gaining insight has never been easier&#x1F680;<br>
+
+        <h3>Visions&#x1F441;</h3>
+        Visions are shared projects, on which a team can work together.<br>
+        All you need to do is load your CSV document. Our tools will detect the variables for you.<br>
+        You have the option to make your Visions visible to others (you still have to manually add users, in the Vision panel, to allow them to edit).<br>
+        <br>
+        <h3>Plots&#x1F4C8;</h3>
+        Plots are visual representation of data.<br>
+        Just select the two dimensions you want to plot out and if you want the points to be connected.<br>
+        It's that easy!<br>
+        <br>
+        <h3>Models&#x1F916;</h3>
+        Models are regressional neural networks.<br>
+        You have to select the variable which the model should predict, and the variables that the prediction should be built upon.
+        You can also choose the learning rate (if you don't know how to choose it, please plug in a standard 0.01) and the number of epochs, which are the number of generations for which the model will be trained.<br>
+        Based on this model, you can make as many predictions as you wish. They are visible in the predictions log, which is situated in that model's panel.<br>
+        <br>
+        <h3>Boxes&#x1F4C3;</h3>
+        Boxes are pieces of editable text, where users can note their observations, based on the analysis of the data.<br>
+        Boxes can be added in the project panel, in every plot's panel and in every model's panel.<br>
+        You can change the order of the boxes through the arrows.<br>
+        Please note that boxes should be always saved after they are modified.<br>
+    </p>   
+    
+    <small class="normal-text custom-paragraph">This project was made by Alex Jerpelea for the <a target="_blank" href='https://infoeducatie.ro/acasa'>INFOEDUCATIE</a> contest.  <span class="red-heart">&#x2764;</span><br>
+        Please note that sometimes analysts and premium softwares are worth it.<br> Our platform aims to help small teams, that don't have very complex datasets, or that don't have the financial means to aquire professional help.</small>
+
+    <%- include('./partials/footer.ejs'); %>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
+</body>
+</html>
