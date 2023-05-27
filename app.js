@@ -887,7 +887,7 @@ app.get('/project/fileview/:id', (req, res) => {
                         }
                     })
 
-                    if (!isEditor && project.private) {
+                    if (!isEditor && !project.visible) {
                         res.cookie('warning', 'you are not an editor and this project is private or you have been logged out', { maxAge: 1000 });
                         res.redirect('/');
                         return;
