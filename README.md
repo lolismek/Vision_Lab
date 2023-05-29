@@ -1,4 +1,4 @@
-# Vision_Lab
+# Vision Lab
 A platform designed to help small teams of people which don’t have the financial resources to consult a professional analyst gain insight of their data through visualization and prediction tools, empowered by AI.
 
 <a href="https://docs.google.com/document/d/1BL1JKj45IL-ECRy2uvYYaHIwALWS-e4xudvIFCJ4ClY/edit?usp=sharing">documentation</a> <br>
